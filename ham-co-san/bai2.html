@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 2</title>
+</head>
+<body>
+<script>
+    let sequence = [];
+    let lengthS = +prompt('input length of sequence :');
+    for (let i = 0; i < lengthS; i++) {
+        sequence[i] = +prompt('input number :');
+    }
+    let str = sequence.join('');
+    let result = [str[0]];
+    for (let j = 1; j < str.length; j++) {
+        if (str[j - 1] % 2 === 0 && str[j] % 2 === 0) {
+            result.push('-' + str[j])
+        } else {
+            result.push(str[j]);
+        }
+    }
+    document.write('Result is : ' + result.join(''));
+</script>
+</body>
+</html>
